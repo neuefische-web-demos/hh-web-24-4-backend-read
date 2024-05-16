@@ -11,12 +11,12 @@ export default function JokeList() {
   if (!data) {
     return;
   }
-
+  console.log(data);
   return (
     <ul>
       {data.map((joke) => (
-        <li key={joke.id}>
-          <Link href={`/${joke.id}`}>{joke.joke}</Link>
+        <li key={joke._id}>
+          <Link href={`/${joke._id}`}>{joke.joke}</Link>
         </li>
       ))}
     </ul>
